@@ -1,7 +1,19 @@
 body{
 margin:0;padding:0;
-display:flex;flex-direction:row;
-}.sidebar{
+display:flex;flex-direction:column;
+background-color: #f9f6c4;
+}
+h1{
+font-family: "Bungee", sans-serif;
+display: flex; justify-content: center;
+color: #fe9ec7;letter-spacing: 5px;
+-webkit-text-stroke: 2px brown;
+margin-top: 75px;
+}
+.kepala{
+display:flex; flex-direction:row;
+}
+.sidebar{
 height:100vh;
 font-size:18px;
 width:fit-content;
@@ -9,7 +21,7 @@ padding:5px;
 position:fixed;
 transform:translateX(-100%);
 transition:0.5s;
-background-color:#5d94ff;
+background-color:#89d4ff;
 }
 .sidebar.active{
 transform:translateX(0%);
@@ -24,14 +36,15 @@ transition:0.5s;
 }
 .hamburger.ham{
 transform:translateX(230%);
-}
-.box{
---mask:
-radial-gradient(34.99px at 50% calc(100% - 48px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%,
-radial-gradient(34.99px at 50% calc(100% + 18px), #0000 99%, #000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
--webkit-mask: var(--mask);
-mask: var(--mask);
-position: absolute;
-z-index:-5;
-width: 50px;
+}.box {
+  position:absolute;
+  z-index:-5;
+  width: 100vw;
+  height: 18vh;
+  background-color: #44acff;
+  --mask:
+    radial-gradient(34.99px at 50% calc(100% - 48px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(34.99px at 50% calc(100% + 18px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }
