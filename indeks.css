@@ -3,12 +3,22 @@ margin:0;padding:0;
 display:flex;flex-direction:column;
 background-color: #f9f6c4;
 }
-h1{
-font-family: "Bungee", sans-serif;
-display: flex; justify-content: center;
-color: #fe9ec7;letter-spacing: 5px;
--webkit-text-stroke: 2px brown;
-margin-top: 75px;
+.rodaAtas {
+  position: absolute;
+  top: -30vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto; 
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  border: 10px dashed #844113;
+  animation: putar 10s linear infinite;
+}
+
+@keyframes putar{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .kepala{
 display:flex; flex-direction:row;
@@ -36,15 +46,4 @@ transition:0.5s;
 }
 .hamburger.ham{
 transform:translateX(230%);
-}.box {
-  position:absolute;
-  z-index:-5;
-  width: 100vw;
-  height: 18vh;
-  background-color: #44acff;
-  --mask:
-    radial-gradient(34.99px at 50% calc(100% - 48px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
-    radial-gradient(34.99px at 50% calc(100% + 18px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
 }
