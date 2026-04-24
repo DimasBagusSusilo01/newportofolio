@@ -3,11 +3,8 @@ margin:0;padding:0;
 display:flex;flex-direction:column;
 background-color: #f9f6c4;
 }
-.rodaAtas {
+.rodaAtas,.rodaBawah{
   position: absolute;
-  top: -30vw;
-  left: 0;
-  right: 0;
   margin: 0 auto; 
   width: 60vw;
   height: 60vw;
@@ -15,7 +12,16 @@ background-color: #f9f6c4;
   border: 10px dashed #844113;
   animation: putar 10s linear infinite;
 }
-
+.rodaAtas{
+  top: -30vw;
+  left: 0;
+  right: 0;
+}
+.rodaBawah{
+  bottom: -30vw;
+  left: 0;
+  right: 0;
+}
 @keyframes putar{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -37,11 +43,12 @@ background-color:#89d4ff;
 transform:translateX(0%);
 }
 .hamburger{
+position: relative;
+z-index: 20;
 height:fit-content;
 padding:5px;
 background-color:transparent;
-border:transparent;
-font-size:18px;
+font-size:38px;
 transition:0.5s;
 }
 .hamburger.ham{
